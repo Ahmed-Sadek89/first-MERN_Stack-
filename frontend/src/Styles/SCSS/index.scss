@@ -1,5 +1,6 @@
-$color: red;
-p{
-    color: $color;
-    grid-template-columns: min-content;
-}
+@import 'base';
+@import 'App';
+
+@import "../../Components/Header/_Styles.scss";
+@import "../../Components/Main/_Styles.scss";
+@import "../../Components/Footer/_Styles.scss";

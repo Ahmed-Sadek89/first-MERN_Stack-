@@ -1,9 +1,13 @@
+import Header from './Components/Header/Header';
+import Main from './Components/Main/Main';
+import Footer from './Components/Footer/Footer';
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>hello from client using react.js</h1>
+    <div className="layout">
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
