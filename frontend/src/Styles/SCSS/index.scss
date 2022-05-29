@@ -1,6 +1,14 @@
-@import 'base';
-@import 'App';
+@import 'basics';
+@import 'variables';
+@import 'media';
 
-@import "../../Components/Header/_Styles.scss";
-@import "../../Components/Main/_Styles.scss";
-@import "../../Components/Footer/_Styles.scss";
+// home
+@import '../../Components/Announcement/_Styles.scss';
+@import '../../Components/Navbar/_Styles.scss';
+@import '../../Components/Slider/_Styles.scss';
+@import '../../Components/Categories/_Styles.scss';
+@import '../../Components/Products/_Styles.scss';
+@import '../../Components/Newsletter/_Styles.scss';
+@import '../../Components/Footer/_Styles.scss';
+@import '../../Components/SADEK/_Styles.scss';
+
