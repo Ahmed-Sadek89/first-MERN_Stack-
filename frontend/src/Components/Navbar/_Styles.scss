@@ -45,6 +45,7 @@
         text-transform: uppercase;
         font-weight: bold;
         font-size: 20px;
+        cursor: pointer;
         @include xs{
             text-align: center;
             margin: 15px 0px;

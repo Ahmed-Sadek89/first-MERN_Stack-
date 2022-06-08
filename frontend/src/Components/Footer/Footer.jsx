@@ -1,4 +1,4 @@
-import React from 'react'
+import {memo} from 'react'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -9,6 +9,8 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import { Link } from './Styles';
 
 const Footer = () => {
+    console.log('hello i am Footer components');
+
   return (
     <div className='footer'>
         <div className="container">
@@ -76,4 +78,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default memo(Footer)

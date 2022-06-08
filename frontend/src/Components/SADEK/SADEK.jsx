@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const SADEK = () => {
+  console.log('hello i am SADEK components');
   return (
     <div className='sadek'>
         <p className='container'>Copyright © 2022</p>
@@ -11,4 +12,4 @@ const SADEK = () => {
   )
 }
 
-export default SADEK
+export default memo(SADEK)

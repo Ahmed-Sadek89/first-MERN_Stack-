@@ -1,6 +1,7 @@
-import React from 'react'
+import {memo} from 'react'
 
 const Inputs = () => {
+    console.log('hello i am Inputs components');
   return (
     <>
         <div>
@@ -65,4 +66,4 @@ const Inputs = () => {
   )
 }
 
-export default Inputs
+export default memo(Inputs)

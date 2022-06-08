@@ -1,8 +1,11 @@
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+import { memo } from 'react';
 import { SpanColor } from './Styles';
 
 const OneProduct = () => {
+ console.log('hello i am OneProduct components');
+
   return (
     <div className='oneProduct'>
         <div className="container">
@@ -59,4 +62,4 @@ const OneProduct = () => {
   )
 }
 
-export default OneProduct
+export default memo(OneProduct)

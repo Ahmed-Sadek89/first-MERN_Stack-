@@ -1,6 +1,9 @@
 import SendIcon from '@material-ui/icons/Send';
+import { memo } from 'react';
 
 const Newsletter = () => {
+  console.log('hello i am Newsletter components');
+
   return (
     <div className="newsletter">
       <div className="container">
@@ -19,4 +22,4 @@ const Newsletter = () => {
   )
 }
 
-export default Newsletter
+export default memo(Newsletter)
