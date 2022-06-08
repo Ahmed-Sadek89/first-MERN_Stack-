@@ -1,10 +1,11 @@
-import {useState} from 'react';
+import {useState, memo} from 'react';
 import {Arrow, Content, Wrapper} from "./Styles";
 import {sliderItems} from '../../Assets/Data';
 import ArrowLeftOutlinedIcon from '@material-ui/icons/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@material-ui/icons/ArrowRightOutlined';
 
 const Slider = () => {
+    console.log('hello i am Slider components');
     const [slideShow, setSlideShow] = useState(0)
     const handleSlider = (direction) => {
         if (direction === "left") {
@@ -46,4 +47,4 @@ const Slider = () => {
     )
 }
 
-export default Slider
+export default memo(Slider)

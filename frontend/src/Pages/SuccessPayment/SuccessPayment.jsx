@@ -1,9 +1,10 @@
-import React from 'react'
+import {memo} from 'react'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import {useNavigate} from 'react-router-dom';
 
 const SuccessPayment = () => {
   const navigate = useNavigate()
+  console.log('hello i am SuccessPayment page');
   return (
     <div className='success'>
       <div className="successContent">
@@ -16,4 +17,4 @@ const SuccessPayment = () => {
   )
 }
 
-export default SuccessPayment
+export default memo(SuccessPayment)

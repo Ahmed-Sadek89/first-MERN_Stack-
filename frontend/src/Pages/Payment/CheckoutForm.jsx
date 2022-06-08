@@ -1,7 +1,9 @@
+import { memo } from "react";
 import Inputs from "./Inputs";
 import usePaymentHook from "./usePaymentHook";
 
-export const CheckoutForm = () => {
+const CheckoutForm = () => {
+  console.log('hello i am CheckoutForm components');
   const {
     stripe,
     paymentProccessing,
@@ -32,3 +34,5 @@ export const CheckoutForm = () => {
       </form>
   );
 };
+
+export default memo(CheckoutForm)

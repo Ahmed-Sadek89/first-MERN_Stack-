@@ -63,7 +63,12 @@ const getAllProducts = async (req, res) => {
         } else {
             products = await Product.find().sort({_id: -1})
         }
-        res.status(200).json({status: 200, count: products.length, products})
+        res.status(200).json({
+            status: 200, 
+            categories: categories ? categories: null, 
+            count: products.length, 
+            products
+        })
     } catch(error) {
         res.status(500).json({status: 500, message: error.message})
     }

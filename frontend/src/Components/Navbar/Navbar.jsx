@@ -1,8 +1,11 @@
-import { Badge, MenuItem } from '@material-ui/core';
+import { Badge } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import { memo } from 'react';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
+  console.log('hello i am Header components');
   return (
     <div className='navbar container'>
         <div className="part1">
@@ -15,23 +18,29 @@ const Header = () => {
             <SearchIcon className='SearchIcon'/>
           </div>
         </div>
-        <div className="part2">
-          sadek.
+        <div>
+          <Link to='/' className="part2">sadek.</Link>
         </div>
         <div className="part3">
           <button>
-            regester
+            <Link to='/register'>register</Link>
           </button>
           <button>
-            signup
+            <Link to='/login'>login</Link>
           </button>
-          
-          <Badge badgeContent={4} color="primary" className='badge' overlap="rectangular">
-            <ShoppingCartOutlinedIcon />
-          </Badge>
+          <Link to='/cart'>
+            <Badge
+              badgeContent={4} 
+              color="primary" 
+              className='badge' 
+              overlap="rectangular"
+            >
+              <ShoppingCartOutlinedIcon />
+            </Badge>
+          </Link>
         </div>
     </div>
   )
 }
 
-export default Header
+export default memo(Header)

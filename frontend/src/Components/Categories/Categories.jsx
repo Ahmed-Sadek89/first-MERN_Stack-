@@ -1,8 +1,10 @@
-import React from 'react'
+import {memo} from 'react'
+import { Link } from 'react-router-dom';
 import {categories} from '../../Assets/Data';
 
 const Categories = () => {
-  return (
+    console.log('hello i am categories components');
+    return (
     <div className='categories'>
         <div>
             <div className="categoriesContent">
@@ -13,16 +15,18 @@ const Categories = () => {
                         </div>
                         <div className="catInfo">
                             <h1>{index.title}</h1>
-                            <button>
-                                SHOP NOW
-                            </button>
+                            <Link to={`/products/${index.cat}`}>
+                                <button>
+                                    SHOP NOW
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
     </div>
-  )
+    )
 }
 
-export default Categories
+export default memo(Categories)

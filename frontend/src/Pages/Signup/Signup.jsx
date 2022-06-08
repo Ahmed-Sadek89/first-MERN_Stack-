@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Signup = () => {
+    console.log('hello i am Signup page');
   return (
     <div className='signup'>
         <div className="signupContent container">
@@ -27,4 +28,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default memo(Signup)

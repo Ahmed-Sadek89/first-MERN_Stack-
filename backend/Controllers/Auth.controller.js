@@ -36,8 +36,9 @@ const authLoginController = async ( req, res ) => {
     const { email } = req.body
     try {
         let checkUser = await User.checkLogin(email, req.body.password)
+        const {password, ...others } = checkUser._doc;
         const token = createToken(checkUser);
-        res.status(200).json({status: 200, checkUser, token})
+        res.status(200).json({status: 200, user: others, token})
     }
     catch(error) {
         res.status(500).json({status: 500, error: error.message})
